@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* HEART RAIN */
+#heart-rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* PAGE */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.page-1 {
+  background: #fff6dd;
+  display: flex;
+}
+
+.page-2 {
+  background: #ffebf0;
+}
+
+.page-3 {
+  background: #3b82f6;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* PHOTO */
+.photo {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POPUP MESSAGE */
+.caption {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo:hover .caption,
+.photo:active .caption {
+  opacity: 1;
+}
+
+/* MESSAGE BOX */
+.message-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 600px;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #ff5c8d;
+  color: white;
+  cursor: pointer;
+}
+
+/* HEART */
+.heart {
+  position: absolute;
+  top: -30px;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo {
+    width: 140px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
