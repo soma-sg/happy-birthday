@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -161,4 +164,46 @@ button {
 /* Move Start Celebration button down on first page */
 .page-1 button {
   margin-top: 50px;   /* increase to move further down */
+}
+
+/* Fade + slide animation */
+.page {
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 📱 Mobile fixes */
+@media (max-width: 768px) {
+
+  .page-1 h1 {
+    font-size: 36px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery img {
+    width: 150px;
+    height: 190px;
+  }
+
+  .message-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
 }
