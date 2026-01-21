@@ -333,3 +333,31 @@ button {
     object-fit: cover;
   }
 }
+@media (max-width: 768px) {
+
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .memories-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    margin: 0 auto;          /* ⭐ center gallery */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo {
+    height: 90px;
+    margin: auto;            /* ⭐ center each photo */
+  }
+}
