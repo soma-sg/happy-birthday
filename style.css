@@ -22,7 +22,7 @@ html, body {
 /* PAGE */
 .page {
   width: 100vw;
-  height: 100vh;
+ height: auto;
   display: none;
   justify-content: center;
   align-items: center;
@@ -287,5 +287,14 @@ button {
   .caption {
     font-size: 13px;
     padding: 5px 12px;
+  }
+}
+@media (max-width: 768px) {
+  .page {
+    min-height: auto;
+  }
+
+  .gallery {
+    margin-bottom: 40px;
   }
 }
