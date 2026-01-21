@@ -402,3 +402,23 @@ button {
     text-align: center;
   }
 }
+/* MOBILE VIEW – RECTANGLE BOX */
+@media (max-width: 768px) {
+
+  .message-box,
+  .final-box {
+    width: 85%;
+    max-width: 330px;
+
+    padding: 18px 16px;
+
+    border-radius: 3px;   /* small = rectangle */
+    background: rgba(255, 255, 255, 0.85);
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
