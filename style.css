@@ -361,3 +361,48 @@ button {
     margin: auto;            /* ⭐ center each photo */
   }
 }
+@media (max-width: 768px) {
+
+  /* Page 2 full height & center */
+  .page-2 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+  }
+
+  /* Wrapper for memories */
+  .page-2 > div,
+  .page-2 .memories-section {
+    width: 100%;
+  }
+
+  /* Gallery centered */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    max-width: 90%;
+    margin: 20px auto;        /* center horizontally */
+  }
+
+  /* Small photos for mobile */
+  .photo {
+    height: 90px;
+    border-radius: 12px;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* Button spacing */
+  .page-2 button {
+    margin-top: 20px;
+  }
+}
