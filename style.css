@@ -177,7 +177,7 @@ button {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, fr);
     gap: 16px;
   }
 
@@ -206,6 +206,36 @@ button {
 
   .page-2 button {
     margin-top: 45px;   /* move button DOWN on mobile */
+  }
+
+}
+/* ============================= */
+/* MOBILE FIX FOR PAGE 2 */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .page-2 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .page-2 h2 {
+    position: sticky;
+    top: 0;
+    background: #ffe6ea;
+    padding: 10px 0;
+    z-index: 10;
+    font-size: 22px;
+  }
+
+  .page-2 button {
+    margin: 30px auto 10px;
+    display: block;
   }
 
 }
