@@ -22,7 +22,7 @@ html, body {
 /* PAGE */
 .page {
   width: 100vw;
- height: auto;
+  height: 100vh;
   display: none;
   justify-content: center;
   align-items: center;
@@ -88,47 +88,33 @@ button {
 }
 
 /* PHOTO */
-/* PHOTO CARD */
 .photo {
   position: relative;
-  overflow: hidden;      /* 🔒 caption stays inside image */
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
   border-radius: 16px;
 }
 
-/* IMAGE */
 .photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* CAPTION INSIDE PHOTO ONLY */
+/* CAPTION */
 .caption {
   position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  background: rgba(0, 0, 0, 0.45); /* background ONLY behind text */
-  color: #fff;
-  
-  padding: 6px 14px;
-  border-radius: 20px;
-  
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
-  font-family: 'Dancing Script', cursive;
-  text-align: center;
-  
-  max-width: 90%;
-  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-
-/* ❌ REMOVE ANY DARK OVERLAY */
-.photo::before {
-  content: none !important;
-}
-
 
 .photo:hover .caption,
 .photo:active .caption {
@@ -191,28 +177,25 @@ button {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  .message-box { 
-    padding: 25px; 
+  .message-box {
     width: 90%;
+    padding: 25px;
   }
-  .message-box h2 { 
-    font-size: 22px;
-  } 
-  .message-box p { 
+
+  .message-box p {
     font-size: 16px;
-    line-height: 1.7;
   }
 }
 .page-2 h2 {
-  margin-top: 5px;   /* ⬆️ moves text UP */
-  margin-bottom: 2px;
+  margin-top: -30px;   /* ⬆️ moves text UP */
+  margin-bottom: 25px;
 }
 .page-2 button {
-  margin-top: 5px;   /* ⬇️ moves button DOWN */
+  margin-top: 40px;   /* ⬇️ moves button DOWN */
 }
 @media (max-width: 768px) {
 
@@ -225,76 +208,4 @@ button {
     margin-top: 45px;   /* move button DOWN on mobile */
   }
 
-}
-/* ============================= */
-/* MOBILE FIX FOR PAGE 2 */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  .page-2 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  .page-2 h2 {
-    position: sticky;
-    top: 0;
-    background: #ffe6ea;
-    padding: 10px 0;
-    z-index: 10;
-    font-size: 22px;
-  }
-
-  .page-2 button {
-    margin: 30px auto 10px;
-    display: block;
-  }
-
-}
-/* ============================= */
-/* MOBILE PHOTO SIZE IMPROVEMENT */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 photos per row */
-    gap: 12px;
-    padding: 10px 15px;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: 180px;   /* ⬅ makes photos bigger */
-    object-fit: cover;
-    border-radius: 18px;
-  }
-
-  .page-2 {
-    padding-bottom: 20px;
-  }
-
-  .page-2 button {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .caption {
-    font-size: 13px;
-    padding: 5px 12px;
-  }
-}
-@media (max-width: 768px) {
-  .page {
-    min-height: auto;
-  }
-
-  .gallery {
-    margin-bottom: 40px;
-  }
 }
