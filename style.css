@@ -191,11 +191,11 @@ button {
   }
 }
 .page-2 h2 {
-  margin-top: -30px;   /* ⬆️ moves text UP */
-  margin-bottom: 25px;
+  margin-top: -10px;   /* ⬆️ moves text UP */
+  margin-bottom: 5px;
 }
 .page-2 button {
-  margin-top: 40px;   /* ⬇️ moves button DOWN */
+  margin-top: 10px;   /* ⬇️ moves button DOWN */
 }
 @media (max-width: 768px) {
 
