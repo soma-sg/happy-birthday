@@ -422,3 +422,29 @@ button {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
 }
+@media (max-width: 768px) {
+
+  .message-box,
+  .final-box {
+    width: 90%;          /* wider */
+    max-width: 360px;
+
+    min-height: 180px;  /* increases height */
+    padding: 22px 18px; /* more vertical space */
+
+    border-radius: 6px; /* rectangle */
+    background: rgba(255, 255, 255, 0.88);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  }
+}
+
