@@ -3,7 +3,7 @@ let currentPage = 0;
 
 pages[currentPage].style.display = "flex";
 
-/* 🎵 Start music safely on user interaction */
+/* 🎵 Start music */
 function startCelebration() {
   document.getElementById("bg-music").play();
   nextPage();
@@ -15,12 +15,11 @@ function nextPage() {
   pages[currentPage].style.display = "flex";
 
   if (currentPage === 2) {
-    launchConfetti(); // 🎉 last page
+    launchConfetti();
   }
 }
 
-
-/* HEART RAIN */
+/* ❤️ HEART RAIN */
 const heartContainer = document.getElementById("heart-rain");
 
 function createHeart() {
@@ -36,7 +35,7 @@ function createHeart() {
 
 setInterval(createHeart, 120);
 
-/* ✍️ TYPING ANIMATION */
+/* ✍️ TYPING EFFECT */
 const text = "Happy Birthday Muddu Tangi...💝";
 const typingElement = document.getElementById("typing-text");
 let index = 0;
@@ -51,9 +50,7 @@ function typeEffect() {
 
 window.addEventListener("load", typeEffect);
 
-
-
-/* 🎉 CONFETTI ON LAST PAGE */
+/* 🎉 CONFETTI */
 function launchConfetti() {
   for (let i = 0; i < 80; i++) {
     const confetti = document.createElement("div");
@@ -68,12 +65,10 @@ function launchConfetti() {
     confetti.style.zIndex = 999;
 
     document.body.appendChild(confetti);
-
     setTimeout(() => confetti.remove(), 3000);
   }
 }
 
-/* Confetti animation */
 const style = document.createElement("style");
 style.innerHTML = `
 @keyframes confettiFall {
