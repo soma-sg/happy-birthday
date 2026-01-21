@@ -190,3 +190,22 @@ button {
     font-size: 16px;
   }
 }
+.page-2 h2 {
+  margin-top: 5px;   /* ⬆️ moves text UP */
+  margin-bottom: 2px;
+}
+.page-2 button {
+  margin-top: 5px;   /* ⬇️ moves button DOWN */
+}
+@media (max-width: 768px) {
+
+  .page-2 h2 {
+    margin-top: -25px;   /* move heading UP on mobile */
+    font-size: 22px;
+  }
+
+  .page-2 button {
+    margin-top: 45px;   /* move button DOWN on mobile */
+  }
+
+}
