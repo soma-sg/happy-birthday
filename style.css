@@ -381,6 +381,74 @@ button {
 /* MOBILE VIEW – THIRD PAGE BOX MEDIUM SIZE */
 @media (max-width: 768px) {
 
+  .page-3,
+  .final-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .message-box,
+  .final-box {
+    width: 85%;        /* MEDIUM width */
+    max-width: 320px;  /* prevents too large */
+    padding: 20px;
+    
+    font-size: 14px;   /* readable but not huge */
+    line-height: 1.6;
+
+    border-radius: 16px;
+    text-align: center;
+  }
+}
+/* MOBILE VIEW – RECTANGLE BOX */
+@media (max-width: 768px) {
+
+  .message-box,
+  .final-box {
+    width: 85%;
+    max-width: 330px;
+
+    padding: 18px 16px;
+
+    border-radius: 3px;   /* small = rectangle */
+    background: rgba(255, 255, 255, 0.85);
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (max-width: 768px) {
+
+  .message-box,
+  .final-box {
+    width: 90%;          /* wider */
+    max-width: 360px;
+
+    min-height: 180px;  /* increases height */
+    padding: 22px 18px; /* more vertical space */
+
+    border-radius: 6px; /* rectangle */
+    background: rgba(255, 255, 255, 0.88);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  }
+}
+@media (max-width: 768px) {
+
   .page-3 {
     display: flex;
     justify-content: center;
@@ -413,5 +481,37 @@ button {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
 
+  .page-3 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .message-box {
+    width: 90%;          /* wide */
+    max-width: 400px;
+    height: auto;        /* height only as per text */
+
+    background: #ffffff;
+    padding: 16px 18px;
+
+    border-radius: 8px;  /* rectangle, not too round */
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .message-box h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .message-box p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
 
