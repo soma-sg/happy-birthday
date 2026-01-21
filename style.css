@@ -378,3 +378,27 @@ button {
     margin-top: 20px;
   }
 }
+/* MOBILE VIEW – THIRD PAGE BOX MEDIUM SIZE */
+@media (max-width: 768px) {
+
+  .page-3,
+  .final-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .message-box,
+  .final-box {
+    width: 85%;        /* MEDIUM width */
+    max-width: 320px;  /* prevents too large */
+    padding: 20px;
+    
+    font-size: 14px;   /* readable but not huge */
+    line-height: 1.6;
+
+    border-radius: 16px;
+    text-align: center;
+  }
+}
