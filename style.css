@@ -181,13 +181,16 @@ button {
     gap: 16px;
   }
 
-  .message-box {
+  .message-box { 
+    padding: 25px; 
     width: 90%;
-    padding: 25px;
   }
-
-  .message-box p {
+  .message-box h2 { 
+    font-size: 22px;
+  } 
+  .message-box p { 
     font-size: 16px;
+    line-height: 1.7;
   }
 }
 .page-2 h2 {
@@ -238,4 +241,31 @@ button {
     display: block;
   }
 
+}
+/* ============================= */
+/* MOBILE PHOTO SIZE IMPROVEMENT */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 photos per row */
+    gap: 12px;
+    padding: 10px 15px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 180px;   /* ⬅ makes photos bigger */
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .page-2 {
+    padding-bottom: 20px;
+  }
+
+  .page-2 button {
+    margin-top: 20px;
+  }
 }
