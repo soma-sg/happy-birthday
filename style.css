@@ -248,4 +248,20 @@ button {
   height: 200px;   /* 👈 BIG PHOTO SIZE */
   border-radius: 20px;
 }
+/* 📱 MOBILE VIEW – PAGE 2 PERFECT LAYOUT */
+@media (max-width: 768px) {
 
+  /* Allow scrolling on page 2 only */
+  .page-2 {
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    overflow-y: auto;
+  }
+
+  /* Heading visible & centered */
+  .page-2 h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+}
