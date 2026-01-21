@@ -311,3 +311,25 @@ button {
     font-size: 14px;
   }
 }
+/* 📱 Mobile view: small photos */
+@media (max-width: 768px) {
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 photos per row */
+    gap: 8px;
+    width: 92%;
+    margin: auto;
+  }
+
+  .photo {
+    height: 90px;      /* SMALL photos */
+    border-radius: 10px;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
